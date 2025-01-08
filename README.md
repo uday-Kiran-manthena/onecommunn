@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+How to Install and Run the Project
+Follow these steps to set up and run this project on your local machine:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Prerequisites
+Ensure you have the following installed on your system:
 
-Currently, two official plugins are available:
+Node.js (LTS version recommended)
+npm (comes with Node.js) or yarn
+Installation
+Clone the Repository
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+git clone https://github.com/uday-Kiran-manthena/oncommunn.git
+Navigate to the project directory:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
+cd oncommunn
+Install Dependencies Use the following command to install all required packages:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+npm install
+Or, if you use Yarn:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+yarn install
+Running the Project
+Start the Development Server To run the project locally in development mode, use:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+npm run dev
+Or, if you use Yarn:
+
+yarn dev
+Open in Browser After running the command, you’ll see a message in your terminal with a local server URL (e.g., http://localhost:3000). Open that link in your browser to view the project.
+
+Building for Production
+To create an optimized production build:
+
+npm run build
+Or, with Yarn:
+
+yarn build
+The built files will be in the dist directory.
+
+Deploying to GitHub Pages
+To deploy the project to GitHub Pages:
+
+Update the homepage field in your package.json file to:
+
+"homepage": "https://<your-github-username>.github.io/<your-repository-name>"
+Run the following command:
+
+npm run deploy
+This will build the project and publish it to the gh-pages branch.
